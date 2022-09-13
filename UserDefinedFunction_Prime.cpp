@@ -1,3 +1,7 @@
+/* 	An integer is considered a prime number if its only factors are 1 and itself. 
+	Create a function that will determine if an input number is prime or not. 
+	Input ends when a zero value is entered. */
+
 #include <stdio.h>
 #include <conio.h>
 
