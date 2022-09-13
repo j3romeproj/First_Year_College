@@ -1,3 +1,11 @@
+/*	Create a C program that will input integer values in a 5 x 5 array, then do the following: 
+
+	a. Get the sum of the rows and place it in a one-dimensional array. 
+	b. Get the sum of the columns and place it in a one-dimensional array. 
+	c. Determine if all the row sum are equal and display the message “Row sums are equal”.  Otherwise, display “Row sums are not equal’.   
+	d. Determine if all the column sum are equal and display the message “Column sums are equal”.  
+	   Otherwise, display “Column sums are not equal’.   */
+
 #include<stdio.h>
 #include<conio.h>
 // Program
@@ -41,7 +49,7 @@ main( )
         }
         printf("\t %d \n", sumcol[i]); // print/display the sum value  each column
     }
-    // C. Determine if all the row sum are equal and display the message �Row sums are equal�.  Otherwise, display �Row sums are not equal�.
+    // C. Determine if all the row sum are equal and display the message “Row sums are equal”.  Otherwise, display “Row sums are not equal’.
     // Checking if the sum of the rows are equal or not equal
     for(i = 0; i < 5; i++)
         for (j = 0; j < 5; j++)
@@ -52,7 +60,7 @@ main( )
                 printf("\n Rows sums are not equal\n");
             else
                 printf("\n Rows sums are equal\n");
-    // D. Determine if all the column sum are equal and display the message �Column sums are equal�.  Otherwise, display �Column sums are not equal�.
+    // D. Determine if all the column sum are equal and display the message “Column sums are equal”.  Otherwise, display “Column sums are not equal’.
     // Checking if the sum of the columns are equal or not equal
     for(i = 0; i < 5; i++)
         for (j = 0; j < 5; j++)
