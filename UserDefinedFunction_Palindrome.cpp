@@ -1,3 +1,9 @@
+/* 	A palindrome is a string that reads the same both forward and backward. 
+	Create a program that takes a string as an argument 
+	and returns the int value 1 if the string is a palindrome 
+	and display the message “<input string> is a Palindrome” 
+	and returns 0 otherwise and display the message “<input string> is Not a Palindrome” */
+
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
