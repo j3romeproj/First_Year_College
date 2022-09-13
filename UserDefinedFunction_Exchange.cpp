@@ -1,3 +1,5 @@
+/* Create a function that will pass a 3x3 array to the function EXCHANGE. The function should be able to exchange the row and column values. */
+
 #include<stdio.h>
 #include<conio.h>
 // initializing variables
