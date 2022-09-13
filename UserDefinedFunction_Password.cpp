@@ -1,3 +1,7 @@
+/*      Create a password program which will allow for 3 tries only. 
+        If password entered is successful, then display the message “Welcome to PUP Quezon City!”. 
+        Otherwise, display the message “Intruder Alert!” Password entered must be hidden using the “*” */
+
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
