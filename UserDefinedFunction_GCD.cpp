@@ -1,3 +1,6 @@
+/* 	Create a function that will return and display the Greatest Common Divisor of 2 input integer numbers. 
+	End the program only when a zero value is entered */
+
 #include <stdio.h>
 #include <conio.h>
 // declaring integers
