@@ -1,3 +1,5 @@
+/* 	create a function that will sort 3 integer values. */
+
 #include <stdio.h>
 #include <conio.h>
 
