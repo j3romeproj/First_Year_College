@@ -1,3 +1,5 @@
+/* Create a program that will compute for the power of base 2 from 0 – 10. Display the results using the format below. */
+
 #include <stdio.h>
 #include <math.h> // it is to use the pow statement
 #include <conio.h>
