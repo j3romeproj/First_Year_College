@@ -1,3 +1,19 @@
+/*      Create a menu driven program for singly linked list.  Menu option are as follows: 
+
+        MAIN MENU 
+
+        A. Enter Linked List values 
+        B. Compute and Display sum of values 
+        C. Display highest value 
+        D. Display lowest value 
+        E. Display odd numbers 
+        F. Display even numbers 
+        G. Exit 
+
+        Note:   Terminate input when the number zero is entered for option A. 
+                Options B – F cannot be chosen unless linked list was created first. */
+
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<string.h>
