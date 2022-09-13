@@ -52,7 +52,7 @@ float overtime(float x, float y);
 main()                                                    // Main Function
 {   FILE *fp;                                             // File Creation
       fp = fopen("employee.txt","a");                     // File opening / named employee.txt, append
-      if(fp==NULL){                                       //  if file is not created successfully
+      if(fp == NULL){                                     //  if file is not created successfully
         printf("Filecannotbecreated!");
         exit(1);
       }
@@ -70,24 +70,23 @@ main()                                                    // Main Function
           restrict();                                     // Restrictions
         if(stricmp(employee.statuscode,"R") == 0){        // If the user input R 
           printf("\t\tBasicSalary:");
-            scanf("%f",&basic_pay);
+            scanf("%f", &basic_pay);
           basic_rate=basic_pay/160;
         }else if(stricmp(employee.statuscode,"C") == 0){  // If the user input C 
           printf("\t\tBasicRate:");
-            scanf("%f",&basic_rate);
-          basic_pay=basic_rate*160;
+            scanf("%f", &basic_rate);
+          basic_pay = basic_rate * 160;
         }
         printf("\t\tHour/sWorked:");                      // Printing
-          scanf("%f",&employee.hoursworked);              // data stored at employee.hoursworked
+          scanf("%f", &employee.hoursworked);             // data stored at employee.hoursworked
         printf("\t\tDeduction:");                         // Printing
-          scanf("%f",&employee.deduction);                // employee.deduction
+          scanf("%f", &employee.deduction);               // employee.deduction
           
-        fprintf(fp,"\nEmployeeName: %s\nEmployee Number: %s\nEmployee Status: %s\nEmployee Hour/s Worked: %.2f
-                    \nEmployee Deduction: %.2f\nEmployee Basic Salary: %.2f\nEmployee Basic Rate: %.2f\n\n"
-                    ,employee.name, employee.num, employee.statuscode, employee.hoursworked, employee.deduction, basic_pay,basic_rate);
+        fprintf(fp,"\nEmployeeName: %s\nEmployee Number: %s\nEmployee Status: %s\nEmployee Hour/s Worked: %.2f\nEmployee Deduction: %.2f\nEmployee Basic Salary: %.2f\nEmployee Basic Rate: %.2f\n\n"
+                    ,employee.name, employee.num, employee.statuscode, employee.hoursworked, employee.deduction, basic_pay, basic_rate);
                     
         printf("\n\tDo you want to add more employee?");
-          scanf("%s",&ans);
+          scanf("%s", &ans);
         
         system("cls");
       }
@@ -97,7 +96,7 @@ main()                                                    // Main Function
       
     system("cls");
       fp = fopen("employee.txt","r");                     // file open and read
-      if(fp==NULL){                                       // if file is not created successfully
+      if(fp == NULL){                                     // if file is not created successfully
         printf("File cannot be opened for reading!");
         exit(1);
       }
@@ -105,27 +104,25 @@ main()                                                    // Main Function
       printf("\n\t\t\t\t\t\tAl Submarsan Vilencia Corporation\n\t\t\t\t\t\t\tMakati City\n\n\t\t\t\t\t\t\tPayroll\n");
       printf("\n\tEmployee Number\tEmployee Name\tStatus\tBasic Salary\tOvertime Pay\tDeduction\tNet Pay\n\n");
       
-      while(fscanf(fp,"\nEmployee Name: %s\nEmployee Number: %s\nEmployee Status: %s\nEmployee Hour/s Worked: %f
-                       \nEmployee Deduction: %f\nEmployee Basic Salary: %f\nEmployee Basic Rate: %f\n\n"
-                       , &employee.name, &employee.num, &employee.statuscode, &employee.hoursworked, &employee.deduction, &basic_pay, &basic_rate)
-                       != EOF){                                             // scan and save data on the file
+      while(fscanf(fp,"\nEmployee Name: %s\nEmployee Number: %s\nEmployee Status: %s\nEmployee Hour/s Worked: %f\nEmployee Deduction: %f\nEmployee Basic Salary: %f\nEmployee Basic Rate: %f\n\n"
+                       , &employee.name, &employee.num, &employee.statuscode, &employee.hoursworked, &employee.deduction, &basic_pay, &basic_rate) != EOF){                                             // scan and save data on the file
       
-      if(stricmp(employee.statuscode,"R") == 0){                            //If the input status was R
-        overtime_pay = 0;
-        overtime_pay = overtime(basic_rate, employee.hoursworked);
-        strcpy(employee.statuscode,"Regular");                              // R = Regular 
-        net_pay = basic_pay + overtime_pay - employee.deduction;            // Netpay is basic pay + overtime pay - deduction
-        printf("\t%10s\t%15s\t%s%16.2f%16.2f%13.2f%18.2f\n", employee.num, employee.name, employee.statuscode, basic_pay, overtime_pay, employee.deduction, net_pay);
-      } else if(stricmp(employee.statuscode,"C") == 0){                     // If the input status was C, then the formula for casual overtime pay is used 
-        overtime_pay = 0;
-        overtime_pay = overtime(basic_rate, employee.hoursworked);
-        strcpy(employee.statuscode,"Casual");                               // C = Casual
-        net_pay = basic_pay + overtime_pay - employee.deduction;            // Netpay is basic pay + overtime pay - deduction
-        printf("\t%10s\t%15s\t%s%17.2f%16.2f%13.2f%18.2f\n", employee.num, employee.name, employee.statuscode, basic_pay, overtime_pay, employee.deduction, net_pay);
+        if(stricmp(employee.statuscode,"R") == 0){                            //If the input status was R
+          overtime_pay = 0;
+          overtime_pay = overtime(basic_rate, employee.hoursworked);
+          strcpy(employee.statuscode,"Regular");                              // R = Regular 
+          net_pay = basic_pay + overtime_pay - employee.deduction;            // Netpay is basic pay + overtime pay - deduction
+          printf("\t%10s\t%15s\t%s%16.2f%16.2f%13.2f%18.2f\n", employee.num, employee.name, employee.statuscode, basic_pay, overtime_pay, employee.deduction, net_pay);
+        }else if(stricmp(employee.statuscode,"C") == 0){                     // If the input status was C, then the formula for casual overtime pay is used 
+          overtime_pay = 0;
+          overtime_pay = overtime(basic_rate, employee.hoursworked);
+          strcpy(employee.statuscode,"Casual");                               // C = Casual
+          net_pay = basic_pay + overtime_pay - employee.deduction;            // Netpay is basic pay + overtime pay - deduction
+          printf("\t%10s\t%15s\t%s%17.2f%16.2f%13.2f%18.2f\n", employee.num, employee.name, employee.statuscode, basic_pay, overtime_pay, employee.deduction, net_pay);
+        }
       }
-    }
     
-    fclose(fp);                                                             // File close 
+      fclose(fp);                                                             // File close 
 
   getch();
   return0;
