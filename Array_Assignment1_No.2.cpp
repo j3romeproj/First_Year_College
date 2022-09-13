@@ -1,3 +1,7 @@
+/* 	Create a C program that will input integer values in a 5 x 5 array.  
+	Check the values and change all negative values to zero values.  
+	Display the original array and the changed array. */
+
 #include<stdio.h>
 #include<conio.h>
 
