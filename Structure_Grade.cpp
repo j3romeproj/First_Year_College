@@ -1,3 +1,9 @@
+/*      Create a program that will compute for the grade average of a student in 3 quizzes.  
+        Moreover, compute the average of 5 students per quiz and grade average.   
+
+        Note: 
+        Grade value may range from 000.00 to 100.00  */
+
 #include <stdio.h>
 #include <conio.h>
 #include <malloc.h>
