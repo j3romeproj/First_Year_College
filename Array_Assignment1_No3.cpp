@@ -1,3 +1,12 @@
+/*	Create a C program that will search for an integer value from a list of n integer values 
+	and count the number of occurrences of that number. 
+
+	Example: 
+      	List contains :     5    6    5   9    5   3   2   7   5  6 
+      	Number to be searched is 5 
+
+	Output:   There are 4 occurrences of the number 5 */
+
 #include<stdio.h>
 #include<conio.h>
 
